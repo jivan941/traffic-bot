@@ -17,7 +17,8 @@ async def visit():
     for i in range(VISITS):
         print(f"[{i+1}] Visiting site...")
         await page.goto(URL, {'waitUntil': 'domcontentloaded'})
-        await page.waitForTimeout(random.randint(2000, 5000))
+        await asyncio.sleep(random.randint(2, 5))
+
         try:
             await page.click(CLICK_SELECTOR)
             print(">> Link clicked")
