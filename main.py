@@ -23,7 +23,8 @@ async def visit():
             print(">> Link clicked")
         except:
             print(">> Link not found")
-        await page.waitForTimeout(random.randint(2000, 5000))
+        await asyncio.sleep(random.randint(2, 5))
+
 
     await browser.close()
 
