@@ -1,1 +1,7 @@
-# traffic-bot
+services:
+  - type: web
+    name: flask-app
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
